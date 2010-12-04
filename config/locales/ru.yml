@@ -1,0 +1,75 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+ru:
+  time:
+    formats:
+      default: "%a, %d %b %Y, %H:%M"
+
+  activerecord:
+    models:
+      user: "Пользователи"
+      admin: "Администраторы"
+      job_title: "Должности"
+      city: "Города"
+      teacher: "Учителя"
+      school: "Школы"
+    attributes:
+      user:
+         locked_at: 'Заблокирован'
+         full_name: 'Полное имя (ФИО)'
+         current_sign_in_at: 'Время входа'
+         current_sign_in_ip: 'Текущий IP'
+         updated_at: 'Изменен'
+         mobile: 'Сотовый телефон'
+         password: 'Пароль'
+         admin: 'Админ'
+      teacher:
+        full_name: 'Полное имя (ФИО)'
+      school:
+        title: 'Название школы'
+        address: 'Адрес школы(улица, номер дома)'
+        city: 'Город'
+      admin:
+        failed_attempts: 'Отказано в доступе'
+        locked_at: 'Заблокирован'
+        full_name: 'Полное имя (ФИО)'
+        current_sign_in_at: 'Время входа'
+        current_sign_in_ip: 'Текущий IP'
+        updated_at: 'Изменен'
+        mobile: 'Сотовый телефон'
+        password: 'Пароль'
+        admin: 'Админ'
+        operator: "Операторы"
+      job_title:
+        title: 'Название должности'
+      city:
+        title: 'Город'
+        zip: 'Почтовый индекс'
+        phone_code: 'тел.код города'
+        operators: "Операторы"
+  application_name: "Дневник СМС"
+  users: "Пользователи"
+  admins: "Администраторы"
+  teachers: "Учителя"
+  job_titles: "Должности"
+  schools: "Школы"
+  mobile_syntax: '(Международный формат(например): 79081114455'
+  cities: "Города"
+  countries: "Страны"
+  jobs: "Должности"
+  logged_as: "Вы вошли как пользователь"
+  email_or_mobile: "email или сотовый"
+  password: "пароль"
+  remember_me: "запомнить меня"
+  mobile_syntaxx: "телефон должен быть в формате 7XXXXXXXXXX"
+  admin: "админ"
+  operator: "оператор"
+
+  active_scaffold:
+    errors:
+      template:
+        body: "Пожалуйста исправьте следующие ошибки"
+        header: "Внимание:"
+  settings: "Настройки"
+  user_settings: "Настройки пользователя"

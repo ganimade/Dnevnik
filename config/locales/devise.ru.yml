@@ -1,0 +1,48 @@
+ru:
+  sign_out: "Выход"
+  sign_in_title: "Вход на сайт"
+  sign_in: "Войти"
+  forgot_your_password: "Забыли пароль?"
+
+
+  errors:
+    messages:
+      not_found: "не найден"
+      already_confirmed: "was already confirmed"
+      not_locked: "не был заблокирован"
+
+  devise:
+    failure:
+      unauthenticated: 'Необходимо авторизоваться!'
+      unconfirmed: 'You have to confirm your account before continuing.'
+      locked: 'Ваша запись заблокирована.'
+      invalid: 'неправильный email или пароль.'
+      invalid_token: 'Invalid authentication token.'
+      timeout: 'Вас долго не было, пожалуйста пройдите авторизацию.'
+      inactive: 'Your account was not activated yet.'
+    sessions:
+      signed_in: 'Добро пожаловать'
+      signed_out: 'Досвиданья!'
+    passwords:
+      send_instructions: 'Через несколько минут вы получите email с инструкциями по востановлению пароля.'
+      updated: 'Вы успешно сменили пароль и вошли на сайт.'
+    confirmations:
+      send_instructions: 'You will receive an email with instructions about how to confirm your account in a few minutes.'
+      confirmed: 'Your account was successfully confirmed. You are now signed in.'
+    registrations:
+      signed_up: 'Вы успешно зарегистрировались.'
+      updated: 'Вы успешно обновили свои данные.'
+      destroyed: 'Bye! Your account was successfully cancelled. We hope to see you again soon.'
+    unlocks:
+      send_instructions: 'Через несколько минут вы получите email с инструкциями для входа.'
+      unlocked: 'Ваша запись была разблокирована. Вы успешно вошли на сайт.'
+    mailer:
+      confirmation_instructions:
+        subject: 'Подтверждение регистрации'
+      reset_password_instructions:
+        subject: 'Иснтрукции по востановлению пароля'
+      unlock_instructions:
+        subject: 'Иснтрукции по востановлению пароля'
+        submit_me: 'Отправить мне по электронной почте'
+
+  send_password_instructions: "Отправьте мне  email с инструкциями по востановлению пароля"

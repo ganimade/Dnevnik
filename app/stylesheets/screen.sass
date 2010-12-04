@@ -1,0 +1,87 @@
+//** SCREEN STYLES **//
+
+// Imports --------------------------------------------------------------
+
+@import defaults
+
+//$base-font-size: 14px
+//$base-line-height: 16px
+
+/* Layout --------------------------------------------------------------
+
++susy
+
+// change '.container' to match your HTML container element
+// or @extend it to apply multiple containers on your site.
+#container
+  +container
+  +show-grid("grid.png")
+  #header
+    +full
+    overflow: auto
+    #logo
+      +pad(1,1)
+      +columns(3)
+      +alpha
+      margin-top: 1em
+    #current_user
+      +columns(7)
+      +omega
+      text-align: right
+  #main-content
+    +full
+    #sidebar
+      +columns(3)
+      +alpha
+    #workspace
+      +columns(8)
+      +omega
+
+  #footer
+    +full
+    text-align: right
+
+// show-grid loads a 64+16x24 grid image by default
+// For other grid settings, run `compass grid-img 30+10x20`
+// Where 30 is the column width, 10 is the gutter width,
+// and 20 is the (optional) line-height.
+.active-scaffold
+  li.form-element
+    dt
+      width: 5em
+  table, th
+    padding-bottom: 0
+  th, td, caption
+    padding: 0
+    vertical-align: middle
+  dt
+    margin-top: 0
+
+
+
+/* Styles --------------------------------------------------------------
+.box
+  background: #DDD
+  margin-bottom: 20px
+  padding: 10px 10px 1px
+  h2
+    background: #333
+    color: white
+    font-size: 1em
+    font-weight: normal
+    margin: -10px -10px 0px
+    padding: 6px 12px
+    text-transform: uppercase
+
+#container
+  #header
+    background: #cccccc
+    margin-bottom: 1em
+    #logo
+    #current_user
+  #main
+    #sidebar
+
+    #workspace
+  #footer
+    background: #cccccc

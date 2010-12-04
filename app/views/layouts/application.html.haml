@@ -1,0 +1,63 @@
+!!!
+%html
+  %head
+    %title
+      = t('application_name')
+
+    -#= stylesheet_link_tag 'jquery-ui-1.8.6.custom', :media => 'screen, projection'
+    -#= javascript_include_tag :defaults
+    = stylesheet_link_tag 'jquery-ui-1.8.6.custom' , :media => 'screen, projection'
+    -#= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js'
+    = javascript_include_tag 'jquery'
+    -#= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.js'
+    = javascript_include_tag 'jquery-ui-1.8.6.custom.min'
+    = javascript_include_tag 'rails' , 'application'
+
+    = stylesheet_link_tag 'grid.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'text.css', :media => 'screen, projection'
+    = active_scaffold_includes
+    = csrf_meta_tag
+  %body
+    #bodycontainer
+      #header
+        #logo
+          %h1
+            = link_to t('application_name'), root_path
+        #current_user
+          - if user_signed_in?
+            %p
+              #{t "logged_as"} #{current_user.to_label} #{link_to(t('sign_out'), destroy_user_session_path)}
+              %br/
+              - if can?(:manage, :user)
+                &nbsp;&nbsp;||&nbsp;&nbsp;
+                = link_to( t("users"), users_path)
+              - if can?(:manage, :city)
+                &nbsp;&nbsp;||&nbsp;&nbsp;
+                = link_to( t("cities"), cities_path)
+              - if can?(:manage, :country)
+                &nbsp;&nbsp;||&nbsp;&nbsp;
+                = link_to( t("countries"), countries_path)
+              - if can?(:manage, :job)
+                &nbsp;&nbsp;||&nbsp;&nbsp;
+                = link_to( t("jobs"), jobs_path)
+              - if can?(:manage, :school)
+                &nbsp;&nbsp;||&nbsp;&nbsp;
+                = link_to( t("schools"), schools_path)
+
+      #container
+        #main-content
+          - if user_signed_in?
+            .flash
+              - flash.each do |type, message|
+                %div{:class => "message #{type}"}
+                  %p= message
+            = yield
+            - else
+              #sidebar
+                = yield :sidebar
+              #workspace
+                = yield
+
+      #footer
+        %p
+          Copyright &copy; #{Time.now.year} Дневник СМС.
