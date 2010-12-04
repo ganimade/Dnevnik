@@ -1,5 +1,7 @@
 Dnevnik::Application.routes.draw do
 
+  resources :subjects do as_routes end
+
   devise_for :users,  :controllers => { :registrations => "users/registrations" }
 
   resources :users do as_routes end

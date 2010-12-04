@@ -40,7 +40,7 @@
               - if can?(:manage, :job)
                 &nbsp;&nbsp;||&nbsp;&nbsp;
                 = link_to( t("jobs"), jobs_path)
-              - if can?(:manage, :school)
+              - if current_user.role? :operator
                 &nbsp;&nbsp;||&nbsp;&nbsp;
                 = link_to( t("schools"), schools_path)
 

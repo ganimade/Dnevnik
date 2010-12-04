@@ -1,6 +1,6 @@
 require "russian_text"
 class SchoolsController < ApplicationController
-  before_filter :accessible_roles
+ # before_filter :accessible_roles
   load_and_authorize_resource
 
   include RussianText

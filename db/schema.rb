@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101204072519) do
+ActiveRecord::Schema.define(:version => 20101204122418) do
 
   create_table "cities", :force => true do |t|
     t.integer "country_id"
@@ -56,6 +56,15 @@ ActiveRecord::Schema.define(:version => 20101204072519) do
     t.integer "school_id"
     t.integer "user_id"
   end
+
+  create_table "subjects", :force => true do |t|
+    t.integer  "country_id"
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "subjects", ["country_id"], :name => "index_subjects_on_country_id"
 
   create_table "users", :force => true do |t|
     t.string   "mobile"
